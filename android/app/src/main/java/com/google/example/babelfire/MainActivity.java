@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void listenForLanguage(String translationKey, final String languageCode) {
-        if(translationKey != null) {
+        if(translationKey != null && languageCode != null ) {
             DatabaseReference langRef = mDatabase.getReference().child("translations")
                 .child(translationKey).child(languageCode).child("text");
 
